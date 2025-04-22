@@ -1,0 +1,35 @@
+Static Portfolio Project:
+
+
+- I have stopped and started this web app too many times now. I am going to create this from scratch and document what I am doing along the way. 
+
+- I started by creating a new folder in my website folder that will hold my static version of a portfolio site. Then I cd'd into that folder and entered:
+		$ npm create vite@latest Portfolio
+	to create the reactJS app with vite.
+	then I opened the portfolio folder in VSCode and ran:
+		$ npm install 
+		$ npm run dev
+
+- I might decide to add TailwindCSS later if I think it will give the professional look that will elevate a static react site to the next level. Handling the dependencies for all the frameworks and libraries has honestly been the biggest pain in my ass during this process. 
+
+- First thing to do is create a components folder in src 
+
+- Saturday April 12
+	* I'm starting with the header and am gonna style in the CSS this time.
+	* Cleared all of the scaffolding from Vite and have my name and the terminal logo I made with my initials
+	* Copied over the assets from the other site and updated the imports
+	* Trying to minimally used CoPilot for CSS questions when I can't find the answer via google search
+	* I just need to get everything laid out on the page then I can style it in segments
+	* Got the intro and the projects up. Need to probably add some other non web projects.
+	* Had CoPilot do the heavy lifting on the CSS. Will need to go back and review.
+	* Calling it for today 
+
+- Next to add: Timeline and better formatting and styling for the whole site?
+- Dark mode button?
+
+
+
+
+
+		
+		

@@ -1,0 +1,247 @@
+/*
+* 
+*    Color Mode
+*
+*/
+/* Light Mode (Default) */
+:root {
+  --background-color: #fff;
+  --text-color: #333;
+  --heading-color: #222;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --button-bg-color: #007bff;
+  --button-hover-bg-color: #0056b3;
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode */
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --link-color: #4dabf7;
+  --link-hover-color: #2196f3;
+  --button-bg-color: #4dabf7;
+  --button-hover-bg-color: #2196f3;
+  --border-color: #444;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/*
+* 
+*     Typography
+*
+*/
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--heading-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/*
+* 
+*     main content container 
+*
+*/
+.mainContent {
+  max-width: 1280px; /* Ensure the container is wide enough */
+  margin: 0 auto; /* Center the container */
+  padding: 2rem; /* Add padding */
+  width: 100%; /* Ensure it scales responsively */
+}
+
+/*
+* 
+*     header styling 
+*
+*/
+.title {
+  background-color: #333; /* Dark background for contrast */
+  color: #fff; /* White text for readability */
+  padding: 20px; /* Add padding around the header */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out the logo and title */
+}
+
+.title h1 {
+  font-size: 2rem; /* Adjust the font size */
+  margin: 0; /* Remove default margin */
+}
+
+.logo img {
+  height: 50px; /* Adjust the logo size */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/*
+* 
+*     Introduction Styling 
+*
+*/
+.intro-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.intro-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.intro-text {
+  font-size: 1.125rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/*
+* 
+*     Portfolio Content Styling 
+*
+*/
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Temporary background for debugging */
+}
+
+@media (max-width: 1024px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+
+/* @media (max-width: 768px) {
+  .projectGrid {
+    grid-template-columns: repeat(1, 1fr); 
+} 
+
+*/
+
+.projectImage {
+  border: 1px solid var(--border-color);
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensure content stays within the border */
+  box-shadow: 0 4px 6px var(--shadow-color);
+  text-align: center; /* Center-align the content */
+  padding: 15px; /* Add padding inside the container */
+  max-width: 300px; /* Limit the maximum width of each container */
+  width: 100%; /* Ensure it scales responsively */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+}
+
+.projectImage img {
+  width: 100%; /* Make the image responsive */
+  max-width: 350px; /* Increase the maximum width of the image */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 350px; /* Increase the maximum height */
+  object-fit: cover; /* Ensure the image covers its container without distortion */
+  border-bottom: 1px solid #ddd; /* Optional separator */
+  margin-bottom: 10px; /* Add spacing below the image */
+}
+
+.projectImage {
+  border: 1px solid #ddd; /* Add a border around each project */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensure content stays within the border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 15px; /* Add padding inside the container */
+  text-align: center; /* Center-align the content */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+}
+
+.projectImage:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.projectImage img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 1px solid #ddd; /* Add a separator below the image */
+  margin-bottom: 10px; /* Add spacing below the image */
+}
+
+.projectImage h3 {
+  font-size: 1.5rem; /* Adjust the font size for the title */
+  margin: 10px 0; /* Add spacing around the title */
+  color: #333; /* Set the text color */
+}
+
+.projectImage p {
+  font-size: 1rem; /* Adjust the font size for the stack */
+  color: #666; /* Set a lighter text color */
+  margin: 10px 0; /* Add spacing around the stack */
+}
+
+.projectImage p span {
+  display: inline-block; /* Ensure each stack item is inline */
+  background-color: #f0f0f0; /* Add a background color */
+  padding: 5px 10px; /* Add padding inside each stack item */
+  margin: 5px; /* Add spacing between stack items */
+  border-radius: 5px; /* Rounded corners for stack items */
+  font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+.projectImage a {
+  display: inline-block; /* Make links block-like */
+  margin: 10px 5px; /* Add spacing between links */
+  padding: 8px 15px; /* Add padding inside the links */
+  background-color: #007bff; /* Set a button-like background color */
+  color: #fff; /* Set the text color to white */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners for links */
+  transition: background-color 0.3s ease; /* Add hover effect */
+}
+
+.projectImage a:hover {
+  background-color: #0056b3; /* Darken the background on hover */
+}
+
+/*
+* 
+*     Tab Buttons Styling
+*
+*/
+.tabButtonContainer {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 10px; /* Add spacing between buttons */
+  margin: 20px 0; /* Add spacing above and below the buttons */
+}
+
+.tabButtonContainer button {
+  padding: 10px 20px; /* Add padding inside the buttons */
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.tabButtonContainer button:hover {
+  background-color: var(--button-hover-bg-color);
+}
