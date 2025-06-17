@@ -29,7 +29,6 @@
   --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
-
 /*
 * 
 *     Typography
@@ -71,33 +70,22 @@ a:hover {
 *
 */
 .title {
-  background-color: #898989; 
-  color: #fff; 
-  padding: 20px; 
+  background-color: #333; /* Dark background for contrast */
+  color: #fff; /* White text for readability */
+  padding: 20px; /* Add padding around the header */
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between; /* Space out the logo and title */
 }
 
 .title h1 {
-  font-size: 2rem; 
-  margin: 0; 
+  font-size: 2rem; /* Adjust the font size */
+  margin: 0; /* Remove default margin */
 }
 
 .logo img {
   height: 50px; /* Adjust the logo size */
   width: auto; /* Maintain aspect ratio */
-}
-
-.header-content {
-  display: flex;
-  align-items: center; /* Vertically center items */
-  gap: 12px;           /* Optional: space between logo and name */
-}
-
-.logo {
-  display: flex;
-  align-items: center;
 }
 
 /*
