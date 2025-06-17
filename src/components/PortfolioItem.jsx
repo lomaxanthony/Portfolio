@@ -3,7 +3,6 @@ function PortfolioItem({title, imgUrl, stack, github, link}) {
         <div className="projectImage">
           <img
             src={imgUrl}
-            alt="project"
           />
           <div>
             <h3>{title}</h3>

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Portfolio from './Portfolio';
 import Timeline from './Timeline';
 import DealersChoice from './DealersChoice';
 
 function TabSwitcher() {
-    const [activeTab, setActiveTab] = useState(null); 
+    const [activeTab, setActiveTab] = useState(null);
+    const contentRef = useRef(null);
 
     const renderComponent = () => {
         switch (activeTab) {
@@ -20,7 +21,10 @@ function TabSwitcher() {
     };
 
     const handleTabClick = (tabName) => {
-        setActiveTab((prevTab) => (prevTab === tabName ? null : tabName)); 
+        setActiveTab((prevTab) => (prevTab === tabName ? null : tabName));
+        if (contentRef.current) {
+            contentRef.current.scrollIntoView({ behavior: 'smooth' }); 
+        } 
     };
 
     return (
@@ -48,7 +52,9 @@ function TabSwitcher() {
             </div>
 
             {/* Tab Content */}
-            {renderComponent()}
+            <div ref={contentRef}>
+                {renderComponent()}
+            </div>
         </div>
     );
 }

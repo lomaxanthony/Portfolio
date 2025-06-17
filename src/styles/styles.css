@@ -5,14 +5,14 @@
 */
 /* Light Mode (Default) */
 :root {
-  --background-color: #fff;
+  --background-color: #efefef;
   --text-color: #333;
   --heading-color: #222;
   --link-color: #007bff;
-  --link-hover-color: #0056b3;
-  --button-bg-color: #007bff;
-  --button-hover-bg-color: #0056b3;
-  --border-color: #ddd;
+  --link-hover-color: #98b7da;
+  --button-bg-color: #567ca5;
+  --button-hover-bg-color: #346397;
+  --border-color: #1400eb;
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -23,7 +23,7 @@
   --heading-color: #ffffff;
   --link-color: #4dabf7;
   --link-hover-color: #2196f3;
-  --button-bg-color: #4dabf7;
+  --button-bg-color: #5cb3ff;
   --button-hover-bg-color: #2196f3;
   --border-color: #444;
   --shadow-color: rgba(0, 0, 0, 0.5);
@@ -59,10 +59,10 @@ a:hover {
 *
 */
 .mainContent {
-  max-width: 1280px; /* Ensure the container is wide enough */
-  margin: 0 auto; /* Center the container */
-  padding: 2rem; /* Add padding */
-  width: 100%; /* Ensure it scales responsively */
+  max-width: 1280px; 
+  margin: 0 auto; 
+  padding: 2rem;
+  width: 100%; 
 }
 
 /*
@@ -71,22 +71,33 @@ a:hover {
 *
 */
 .title {
-  background-color: #333; /* Dark background for contrast */
-  color: #fff; /* White text for readability */
-  padding: 20px; /* Add padding around the header */
+  background-color: #898989; 
+  color: #fff; 
+  padding: 20px; 
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Space out the logo and title */
+  justify-content: space-between; 
 }
 
 .title h1 {
-  font-size: 2rem; /* Adjust the font size */
-  margin: 0; /* Remove default margin */
+  font-size: 2rem; 
+  margin: 0; 
 }
 
 .logo img {
   height: 50px; /* Adjust the logo size */
   width: auto; /* Maintain aspect ratio */
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  gap: 12px;           /* Optional: space between logo and name */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 /*
