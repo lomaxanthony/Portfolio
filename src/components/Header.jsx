@@ -16,7 +16,7 @@ function Header() {
                   className="logo"
                 >
                     <img
-                      src="public/favicon/android-chrome-192x192.png"
+                      src="/Portfolio/favicon/android-chrome-192x192.png"
                       width={40}
                       height={40}
                       alt="terminalLogo"
