@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import Portfolio from './Portfolio';
 import Timeline from './Timeline';
-import DealersChoice from './DealersChoice';
+import Blog from './Blog';
 
 function TabSwitcher() {
     const [activeTab, setActiveTab] = useState(null);
@@ -14,7 +14,7 @@ function TabSwitcher() {
             case 'timeline':
                 return <Timeline />;
             case 'extra':
-                return <DealersChoice />;
+                return <Blog />;
             default:
                 return null; 
         }
@@ -47,7 +47,7 @@ function TabSwitcher() {
                     className="extraButton"
                     onClick={() => handleTabClick('extra')}
                 >
-                    Dealer's Choice
+                    Blog
                 </button>
             </div>
 

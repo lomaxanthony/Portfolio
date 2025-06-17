@@ -2,19 +2,16 @@ const timeline = [
     {
         year: '2024',
         title: 'Computer Science Graduate',
-        duration: '1 Month',
+        duration: '6 Month',
         details: 
-            `I am actively seeking new opportunities while continuing to refine my skills as a developer.
-            Currently, I am building a portfolio website using React, which I plan to host on AWS to gain
-            hands-on experience in high-demand technologies. I am eager to apply my creative communication 
-            skills in a software engineering role, where I can contribute to innovative solutions and grow 
-            professionally within the field.`,
+            `After completing my Post-Bacc Computer Science degree in December, I started the next step of my career change by applying to a vareity of Software Developer and QA postings. Unfortunately, the tech job market has been unforgiving to an entry level applicant. I have widened my net, widining my focus to other roles in the technology industry. The lack of traction in my job search has been frustrating at times, but I have continued to improved my skills and knowledge. What I may lack in industry experience, I more than make up for it in curiosity, communication, and teamwork.`,
     },
     {
         year: 'Current',
         title: 'Restaurant Manager',
         duration: '11 Years',
-        details: `As a manager at Woodstock's Pizza Parlor, I oversee daily operations, ensuring a smooth and 
+        details: 
+        `As a manager at Woodstock's Pizza Parlor, I oversee daily operations, ensuring a smooth and 
         efficient workflow in a fast-paced environment. I lead a team of staff members, providing guidance and 
         support to ensure excellent customer service. My responsibilities include managing inventory, handling 
         customer inquiries, resolving issues, and ensuring the highest standards of quality and cleanliness are 
