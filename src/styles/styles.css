@@ -70,7 +70,7 @@ a:hover {
 *
 */
 .title {
-  background-color: #333; /* Dark background for contrast */
+  background-color: #747474; /* Dark background for contrast */
   color: #fff; /* White text for readability */
   padding: 20px; /* Add padding around the header */
   display: flex;
@@ -79,13 +79,24 @@ a:hover {
 }
 
 .title h1 {
-  font-size: 2rem; /* Adjust the font size */
-  margin: 0; /* Remove default margin */
+  font-size: 2rem; 
+  margin: 0; 
 }
 
 .logo img {
-  height: 50px; /* Adjust the logo size */
-  width: auto; /* Maintain aspect ratio */
+  height: 50px; 
+  width: auto; 
+}
+
+.header-content {
+  display: flex;
+  align-items: center; 
+  gap: 12px;           
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 /*
