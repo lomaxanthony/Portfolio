@@ -6,6 +6,7 @@ function Portfolio() {
         <div className="portfolioContainer">
           <div className="projectGrid">
             {projects.map(project => (
+              <div className="projectItem">
                 <PortfolioItem 
                   imgUrl={project.imgUrl}
                   title={project.title}
@@ -13,6 +14,7 @@ function Portfolio() {
                   github={project.github}
                   link={project.link}
                 />
+               </div> 
             ))}
           </div>  
         </div>

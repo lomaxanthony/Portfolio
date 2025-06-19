@@ -128,12 +128,29 @@ a:hover {
 *     Portfolio Content Styling 
 *
 */
+.portfolioContainer {
+  background: #cfcfcf; 
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1300px;
+  border: 1px solid #e0e0e0;
+}
 .projectGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
-  background-color: #f9f9f9; /* Temporary background for debugging */
+}
+
+.projectItem {
+  display: flex;
+  background-color: #464646;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
 }
 
 @media (max-width: 1024px) {
@@ -142,39 +159,31 @@ a:hover {
   }
 }
 
-
-/* @media (max-width: 768px) {
-  .projectGrid {
-    grid-template-columns: repeat(1, 1fr); 
-} 
-
-*/
-
 .projectImage {
   border: 1px solid var(--border-color);
-  border-radius: 8px; /* Rounded corners */
-  overflow: hidden; /* Ensure content stays within the border */
+  border-radius: 8px; 
+  overflow: hidden; 
   box-shadow: 0 4px 6px var(--shadow-color);
-  text-align: center; /* Center-align the content */
-  padding: 15px; /* Add padding inside the container */
-  max-width: 300px; /* Limit the maximum width of each container */
-  width: 100%; /* Ensure it scales responsively */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .projectImage img {
-  width: 100%; /* Make the image responsive */
-  max-width: 350px; /* Increase the maximum width of the image */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 350px; /* Increase the maximum height */
-  object-fit: cover; /* Ensure the image covers its container without distortion */
-  border-bottom: 1px solid #ddd; /* Optional separator */
-  margin-bottom: 10px; /* Add spacing below the image */
+  width: 100%; 
+  max-width: 350px;
+  height: auto; 
+  max-height: 350px; 
+  object-fit: cover; 
+  margin-bottom: 10px;
 }
 
 .projectImage {
-  border: 1px solid #ddd; /* Add a border around each project */
-  border-radius: 8px; /* Rounded corners */
+  border: 3px solid #0a0a0a;
+  flex: auto;
+  background-color: gainsboro;
+  border-radius: 8px; 
   overflow: hidden; /* Ensure content stays within the border */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   padding: 15px; /* Add padding inside the container */
@@ -194,10 +203,11 @@ a:hover {
   margin-bottom: 10px; /* Add spacing below the image */
 }
 
-.projectImage h3 {
-  font-size: 1.5rem; /* Adjust the font size for the title */
-  margin: 10px 0; /* Add spacing around the title */
-  color: #333; /* Set the text color */
+.projectImage h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333; 
+  padding-bottom: 5px;
 }
 
 .projectImage p {
@@ -205,7 +215,10 @@ a:hover {
   color: #666; /* Set a lighter text color */
   margin: 10px 0; /* Add spacing around the stack */
 }
-
+.stackType {
+  padding-top: 7px;
+  padding-bottom: 10px;
+}
 .projectImage p span {
   display: inline-block; /* Ensure each stack item is inline */
   background-color: #f0f0f0; /* Add a background color */
@@ -255,3 +268,19 @@ a:hover {
 .tabButtonContainer button:hover {
   background-color: var(--button-hover-bg-color);
 }
+
+/*
+*
+*       Timeline Styling
+*
+*/
+
+.timelineContainer {
+  background: #cfcfcf; 
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  border: 1px solid #e0e0e0;
+} 
