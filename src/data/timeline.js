@@ -2,13 +2,13 @@ const timeline = [
     {
         year: '2024',
         title: 'Computer Science Graduate',
-        duration: '6 Month',
+        duration: '6 Months',
         details: 
-            `After completing my Post-Bacc Computer Science degree in December, I started the next step of my career change by applying to a vareity of Software Developer and QA postings. Unfortunately, the tech job market has been unforgiving to an entry level applicant. I have widened my net, widining my focus to other roles in the technology industry. The lack of traction in my job search has been frustrating at times, but I have continued to improved my skills and knowledge. What I may lack in industry experience, I more than make up for it in curiosity, communication, and teamwork.`,
+            `After completing my Computer Science degree in December, I began the next phase of my career by applying to various Software Developer and QA roles. While the tech job market has been challenging for an entry-level applicant like myself, I have since expanded my search to include a broader range of technology positions. Although the job hunt has been frustrating at times, I’ve remained proactive by continuously sharpening my skills, learning new technologies, and contributing to personal projects. What I may lack in formal industry experience, I more than make up for with curiosity, strong communication, and a collaborative mindset. I’m eager to bring my dedication and adaptability to a team where I can grow and contribute meaningfully.`,
     },
     {
         year: 'Current',
-        title: 'Restaurant Manager',
+        title: 'Assistant General Manager',
         duration: '11 Years',
         details: 
         `As a manager at Woodstock's Pizza Parlor, I oversee daily operations, ensuring a smooth and 
@@ -26,20 +26,14 @@ const timeline = [
             `Graduated from Oregon State University's online Post-Baccalaureate computer science program with
             a 3.73 GPA. During the program I developed a strong foundation in software development, algorithms, 
             data structures, and system design. Throughout my academic journey, I gained hands-on experience with 
-            programming languages such as Python, JavaScript, and C++, and worked on projects that spanned various 
-            domains, including web development, databases, and software engineering. My degree has equipped me with 
+            programming languages such as Python, JavaScript, and C++. I’ve worked on projects both independently and in collaborative team settings, across domains including web development, systems programming, and application-level software engineering. My degree has equipped me with 
             critical problem-solving skills, a solid understanding of computer systems, and the ability to adapt 
             to new technologies in the ever-evolving field of computer science.`,  
     },{
         year: '2014',
         title: `Bachelor's Degree in Humanities`,
         duration: '4 Years',
-        details: `I obtained my first Bachelor's degree in Humanities from Western Oregon University. My focus was 
-        English and Communication. This degree provided me with a deep understanding of language, literature, 
-        and human interaction, fostering critical thinking, effective communication, and analytical skills. 
-        Through coursework in linguistics, writing, public speaking, and media analysis, I honed my ability to 
-        convey complex ideas clearly and persuasively, a skillset that enhances my professional capabilities in 
-        both technical and collaborative environments.`,
+        details: `I earned my first Bachelor's degree in Humanities from Western Oregon University, with a focus on English and Communication. This program developed my skills in language, literature, and human interaction, while sharpening my critical thinking, writing, and public speaking abilities. Through coursework in linguistics, media analysis, and communication, I learned to convey complex ideas clearly and persuasively — a strength that continues to support my work in both technical and collaborative environments.`,
     },
 ]
 

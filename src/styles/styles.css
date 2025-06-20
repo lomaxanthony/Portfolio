@@ -5,7 +5,7 @@
 */
 /* Light Mode (Default) */
 :root {
-  --background-color: #efefef;
+  --background-color: #b3b4c747;
   --text-color: #333;
   --heading-color: #222;
   --link-color: #007bff;
@@ -61,7 +61,7 @@ a:hover {
   max-width: 1280px; 
   margin: 0 auto; 
   padding: 2rem;
-  width: 100%; 
+  width: 75%; 
 }
 
 /*
@@ -69,34 +69,45 @@ a:hover {
 *     header styling 
 *
 */
-.title {
-  background-color: #747474; /* Dark background for contrast */
-  color: #fff; /* White text for readability */
-  padding: 20px; /* Add padding around the header */
+.header-bar {
+  position: sticky;
+  top: 1.5rem;
+  margin: 1.5rem auto 0 auto;
+  max-width: 950px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Space out the logo and title */
+  justify-content: space-between;
+  background: #75a7fd;
+  border-radius: 2rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 0.5rem 2rem;
+  z-index: 1000;
 }
 
-.title h1 {
-  font-size: 2rem; 
-  margin: 0; 
-}
-
-.logo img {
-  height: 50px; 
-  width: auto; 
-}
-
-.header-content {
-  display: flex;
-  align-items: center; 
-  gap: 12px;           
-}
-
-.logo {
+.header-left {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.darkModeToggle {
+  margin-left: 1.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
 }
 
 /*
