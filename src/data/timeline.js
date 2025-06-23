@@ -1,6 +1,6 @@
 const timeline = [
     {
-        year: '2024',
+        year: 'Current',
         title: 'Computer Science Graduate',
         duration: '6 Months',
         details: 
