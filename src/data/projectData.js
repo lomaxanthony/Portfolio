@@ -1,4 +1,4 @@
-const projects = [
+const projectData = [
     {
        title: 'Smart Grocery App',
        imgUrl: '/Portfolio/assets/grocery-buddy.png',
@@ -22,4 +22,4 @@ const projects = [
      },
 ]
 
-export default projects;
+export default projectData;

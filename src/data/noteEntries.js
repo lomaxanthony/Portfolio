@@ -1,4 +1,4 @@
-const blogEntries = [
+const noteEntries = [
     {
         date: '06/17/2025',
         title: 'First Post',
@@ -17,4 +17,4 @@ const blogEntries = [
     }
 ]
 
-export default blogEntries;
+export default noteEntries;

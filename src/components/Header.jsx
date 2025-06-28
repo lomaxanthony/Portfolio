@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
     const [darkMode, setDarkMode] = useState(false);
+    const location = useLocation();
 
     // Ensure clean initial state
     useEffect(() => {
@@ -20,26 +22,13 @@ function Header() {
         }
     };
 
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            const headerHeight = 80; // Approximate header height
-            const elementPosition = element.offsetTop - headerHeight;
-            
-            window.scrollTo({
-                top: elementPosition,
-                behavior: 'smooth'
-            });
-        }
-    };
-
     return (
         <header className="bg-white dark:bg-gray-700 shadow-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-4">
                     {/* Left side - Logo and Name */}
                     <div className="flex items-center space-x-3">
-                        <a href="/Portfolio/" className="flex items-center space-x-2">
+                        <Link to="/Portfolio/" className="flex items-center space-x-2">
                             <img
                                 src="/Portfolio/favicon/android-chrome-192x192.png"
                                 width={40}
@@ -50,29 +39,41 @@ function Header() {
                             <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
                                 Tony Lomax
                             </h1>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="flex items-center space-x-6">
                         <nav className="hidden md:flex items-center space-x-6">
-                            <button 
-                                onClick={() => scrollToSection('portfolio')}
-                                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                            <Link 
+                                to="/Portfolio/projects"
+                                className={`transition-colors duration-200 ${
+                                    location.pathname === '/Portfolio/projects'
+                                        ? 'text-blue-600 dark:text-blue-400' 
+                                        : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                                }`}
                             >
-                                Portfolio
-                            </button>
-                            <button 
-                                onClick={() => scrollToSection('timeline')}
-                                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                                Projects
+                            </Link>
+                            <Link 
+                                to="/Portfolio/timeline"
+                                className={`transition-colors duration-200 ${
+                                    location.pathname === '/Portfolio/timeline'
+                                        ? 'text-blue-600 dark:text-blue-400' 
+                                        : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                                }`}
                             >
                                 Timeline
-                            </button>
-                            <button 
-                                onClick={() => scrollToSection('blog')}
-                                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                            </Link>
+                            <Link 
+                                to="/Portfolio/notes"
+                                className={`transition-colors duration-200 ${
+                                    location.pathname === '/Portfolio/notes'
+                                        ? 'text-blue-600 dark:text-blue-400' 
+                                        : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                                }`}
                             >
-                                Blog
-                            </button>
+                                Dev Notes
+                            </Link>
                         </nav>
                         
                         <button 

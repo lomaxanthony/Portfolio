@@ -1,4 +1,4 @@
-function PortfolioItem({title, imgUrl, stack, github, link}) {
+function ProjectItem({title, imgUrl, stack, github, link}) {
     return (
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200 dark:border-gray-700">
             <img
@@ -50,4 +50,4 @@ function PortfolioItem({title, imgUrl, stack, github, link}) {
     );
 }
 
-export default PortfolioItem;
+export default ProjectItem;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Intro() {
 
@@ -6,19 +7,6 @@ function Intro() {
     
     const toggleBlurb = () => {
       setOpenBlurb( !openBlurb);
-    };
-
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            const headerHeight = 80; // Approximate header height
-            const elementPosition = element.offsetTop - headerHeight;
-            
-            window.scrollTo({
-                top: elementPosition,
-                behavior: 'smooth'
-            });
-        }
     };
 
     const renderBlurb = () => {
@@ -67,26 +55,26 @@ function Intro() {
           
           {renderBlurb()}
 
-          {/* Navigation Buttons - Fun Shapes */}
+          {/* Navigation Buttons */}
           <div className="flex flex-wrap justify-center gap-6 mt-12">
-            <button 
-              onClick={() => scrollToSection('portfolio')}
-              className="px-8 py-4 bg-gray-500 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-500 text-white font-medium rounded-full transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 shadow-lg"
+            <Link 
+                to="/Portfolio/portfolio"
+                className="px-8 py-4 bg-gray-500 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-500 text-white font-medium rounded-full transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 shadow-lg"
             >
-              📂 View Portfolio
-            </button>
-            <button 
-              onClick={() => scrollToSection('timeline')}
-              className="px-8 py-4 bg-gray-500 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-500 text-white font-medium rounded-3xl transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 shadow-lg"
+              📂 View Projects
+            </Link>
+            <Link 
+                to="/Portfolio/timeline"
+                className="px-8 py-4 bg-gray-500 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-500 text-white font-medium rounded-3xl transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 shadow-lg"
             >
               ⏱️ See Timeline
-            </button>
-            <button 
-              onClick={() => scrollToSection('blog')}
-              className="px-8 py-4 bg-gray-500 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-500 text-white font-medium rounded-2xl transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 shadow-lg"
+            </Link>
+            <Link 
+                to="/Portfolio/notes"
+                className="px-8 py-4 bg-gray-500 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-500 text-white font-medium rounded-2xl transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 shadow-lg"
             >
-              📝 Read Blog
-            </button>
+              📝 Dev Notes
+            </Link>
           </div>
         </section>
       </div>
