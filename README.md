@@ -1,6 +1,6 @@
 # Tony Lomax Personal Website - https://lomaxanthony.github.io/Portfolio/
 
-Welcome to my personal portfolio website, built with React, Vite, and Tailwind CSS v4. This site showcases my projects, skills, and experience.
+Welcome to my personal portfolio website, built with React, Vite, and Tailwind CSS. This site showcases my projects, skills, and experience.
 
 ---
 
