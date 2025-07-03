@@ -60,7 +60,7 @@ function Intro() {
           Thanks for checking out my site!
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-2xl mx-auto">
-          This is basically a collection of stuff I've been working on —
+          This is a collection of stuff I've been working on:
           projects, random experiments, whatever's caught my interest lately.
           Feel free to poke around!
         </p>
