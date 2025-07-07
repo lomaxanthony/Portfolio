@@ -15,7 +15,7 @@ const projectData = [
   {
     title: "Smart Grocery App",
     imgUrl: "/Portfolio/assets/grocery-buddy.png",
-    stack: ["Flask", "Vite", "Vue.js", "MySQL", "Google Cloud"],
+    stack: ["Flask", "Vite", "Vue.js", "MySQL"],
     github: "https://github.com/lomaxanthony/467Capstone",
     link: "https://www.youtube.com/watch?v=2Rx51Jvr2uY",
   },

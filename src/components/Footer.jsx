@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-6 mb-6">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/lomaxanthony"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
@@ -50,7 +50,7 @@ const Footer = () => {
           {/* Copyright and info */}
           <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-              © {new Date().getFullYear()} Tony Lomax. Built with React and Tailwind CSS.
+              © {new Date().getFullYear()} Anthony Lomax.
             </p>
             <p className="text-xs text-gray-400 dark:text-gray-500">
               Thanks for visiting my portfolio! 😎

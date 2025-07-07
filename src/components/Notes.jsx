@@ -6,27 +6,52 @@ function Notes() {
   const selectedPost = noteEntries.find(
     (entry) => entry.title === selectedTitle
   );
+  const selectRandomPost = () => {
+    const rando = Math.floor(Math.random() * noteEntries.length);
+    const randomPost = noteEntries[rando].title;
+    // prevent from selecting the same post
+    if (randomPost === selectedTitle && noteEntries.length > 1) {
+      selectRandomPost();
+    } else {
+      setSelectedTitle(randomPost);
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+    <div className="min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
           Dev Notes
         </h2>
-        <label className="block mb-2 text-gray-900 dark:text-white font-medium">
-          Choose a post:
-        </label>
-        <select
-          value={selectedTitle}
-          onChange={(e) => setSelectedTitle(e.target.value)}
-          className="border border-gray-300 dark:border-gray-600 px-3 py-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[200px]"
-        >
-          {noteEntries.map((entry) => (
-            <option key={entry.title} value={entry.title}>
-              {entry.title}
-            </option>
-          ))}
-        </select>
+
+        {/* Select Post by title */}
+        <div className="flex items-end justify-between mb-6">
+          <div>
+            <label className="block mb-2 text-gray-900 dark:text-white font-medium">
+              Choose a post:
+            </label>
+            <select
+              value={selectedTitle}
+              onChange={(e) => setSelectedTitle(e.target.value)}
+              className="border border-gray-300 dark:border-gray-600 px-3 py-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[200px]"
+            >
+              
+              {noteEntries.map((entry) => (
+                <option key={entry.title} value={entry.title}>
+                  {entry.title}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Or select random Button */}
+          <button
+            onClick={selectRandomPost}
+            className="px-3 py-2 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-md transition-colors duration-200"
+          >
+            Random Note
+          </button>
+        </div>
 
         {selectedPost && (
           <div className="mt-4">

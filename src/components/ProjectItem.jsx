@@ -28,7 +28,7 @@ function ProjectItem({ title, imgUrl, stack, github, link }) {
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 text-center px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-md hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors duration-200"
+            className="flex-1 text-center px-4 py-2 bg-transparent hover:bg-gray-500/20 text-gray-300 hover:text-white border border-green-300 font-medium rounded-md transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 shadow-lg"
           >
             GitHub
           </a>
@@ -36,7 +36,7 @@ function ProjectItem({ title, imgUrl, stack, github, link }) {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 text-center px-4 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-md hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
+            className="flex-1 text-center px-4 py-2 bg-transparent hover:bg-white/10 text-blue-100 hover:text-white-900 border border-blue-300 font-medium rounded-md transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-100 focus:ring-offset-2 shadow-lg"
           >
             Live Demo
           </a>

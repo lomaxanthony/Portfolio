@@ -52,10 +52,17 @@ const noteEntries = [
     <br><br>
     So I tried a few things. Hitting enter twice in the string doesn’t work. Newline characters and <br> tag don’t work either. I was kinda stuck. Off to google dot com. Well, actually to Copilot first, but it listed something so silly I thought: <i>there’s no way this is a thing</i>. (Also, side note, Copilot—specifically Claude Sonnet 4 told me the line break would work. Stupid AI!)
     <br><br>
-    Behold: <code>dangerouslySetInnerHTML</code>  which is, shockingly, a real thing. And named so because it is, in fact, dangerous. I read this <a href="https://blog.logrocket.com/using-dangerouslysetinnerhtml-react-application/">blog</a> on the origins of the property, its vulnerabilities, and its implementation. For my use case though, <code>dangerouslySetInnerHTML</code> is the perfect solution as it renders HTML elements inside the strings that I am passing as my data. Now I can just format my dev note content with HTML tags, allowing for full and specific control of formatting for each specific note. 
+    Behold: <code>dangerouslySetInnerHTML</code>  which is, shockingly, a real thing. And named so because it is, in fact, dangerous. I read this <a href="https://blog.logrocket.com/using-dangerouslysetinnerhtml-react-application/" target="_blank">blog</a> on the origins of the property, its vulnerabilities, and its implementation. For my use case though, <code>dangerouslySetInnerHTML</code> is the perfect solution as it renders HTML elements inside the strings that I am passing as my data. Now I can just format my dev note content with HTML tags, allowing for full and specific control of formatting for each specific note. 
     <br><br>
     At some point, I would like to implement a cleverer way to handle text formatting, but for now, I’m feeling dangerous.`,
   },
+  {
+        date:"07/06/2025",
+        title:"Removing 'LightMode'",
+        content: 
+        `Getting rid of Light Mode for now. Added an atmospheric gradient—only really works and looks good with a dark background. No need to have both I think. I get how to add the button and use the setDarkMode hook to change the background color, but I never got it fully working in the first place. (I have admittedly have been relying on Copilot for a lot of CSS). And this is another example of taking the quick AI shortcut to get “full functionality” that ends up being clunky in execution. Even worse, I wouldn’t say that I fully learned conditional light/dark rendering. I've watched a few videos of developers implementing it into their site, but I obviously didn't fully grasp the important steps to make sure both light and dark work together with Tailwind. Might be a feature to re-implement at a future date.         
+        `
+    }
 ];
 
 export default noteEntries;
