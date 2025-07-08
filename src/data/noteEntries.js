@@ -59,7 +59,9 @@ const noteEntries = [
   {
     date: "07/06/2025",
     title: "Removing 'LightMode'",
-    content: `Getting rid of Light Mode for now. Added an atmospheric gradient—only really works and looks good with a dark background. No need to have both I think. I get how to add the button and use the setDarkMode hook to change the background color, but I never got it fully working in the first place. (I have admittedly have been relying on Copilot for a lot of CSS). And this is another example of taking the quick AI shortcut to get “full functionality” that ends up being clunky in execution. Even worse, I wouldn’t say that I fully learned conditional light/dark rendering. I've watched a few videos of developers implementing it into their site, but I obviously didn't fully grasp the important steps to make sure both light and dark work together with Tailwind. Might be a feature to re-implement at a future date.         
+    content: `Getting rid of Light Mode for now. Added an atmospheric gradient—only really works and looks good with a dark background. No need to have both I think. I get how to add the button and use the setDarkMode hook to change the background color, but I never got it fully working in the first place. (I have admittedly have been relying on Copilot for a lot of CSS). 
+    <br></br>
+    And this is another example of taking the quick AI shortcut to get “full functionality” that ends up being clunky in execution. Even worse, I wouldn’t say that I fully learned conditional light/dark rendering. I've watched a few videos of developers implementing it into their site, but I obviously didn't fully grasp the important steps to make sure both light and dark work together with Tailwind. Might be a feature to re-implement at a future date.         
     `,
   },
   {
@@ -73,7 +75,7 @@ const noteEntries = [
     <br></br>
     Now I have to go back and re-do things the correct way (I hope). As always, there’s a good lesson here in taking shortcuts in order to get something working, and I know better. But I needed to <i>finally</i> get my portfolio hosted and live. Not only that, I also knew that I needed the site to look and feel professional. The irony of this is not lost on me: taking a shortcut without fully understanding how TailwindCSS works may have made my site appear more polished, but in reality just made it clunky and disorganized.
     <br></br>
-    I think being okay with vibe coding certain sections with the knowledge that at some point I will absolutely need to refactor this is a slippery slope as scope increases with this and other projects. Although this approach has allowed me to get a functional app live, and my thirst for tinkering and understanding is saving me from an endless tunnel of shallow understanding.`,
+    I think Vibe-Coding certain sections with the knowledge that at some point I will absolutely need to refactor is a slippery slope as the scope increases with this and other projects. Although this approach has allowed me to get a functional app live, and my thirst for tinkering and understanding is saving me from an endless tunnel of shallow understanding.`,
   },
 ];
 
