@@ -1,11 +1,47 @@
 @import "tailwindcss";
 
-body {
-  background-color: white;
-  color: #111827; /* gray-900 */
+/* Prevent overscroll white space by setting html background */
+html {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  /* Prevent overscroll bounce on iOS and other browsers */
+  overscroll-behavior: none;
+  /* Firefox-specific: prevent scroll chaining */
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+  /* Ensure full height coverage */
+  min-height: 100%;
 }
 
-body.dark {
-  background-color: #111827; /* gray-900 */
+body {
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(79, 70, 229, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #111827 0%, #1f2937 100%);
   color: white;
+  animation: breathe 15s ease-in-out infinite;
+  /* Additional overscroll prevention */
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+  /* Prevent horizontal overscroll on mobile */
+  overflow-x: hidden;
+  /* Firefox-specific: ensure body covers full viewport */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make containers semi-transparent */
+.container-bg {
+  background-color: rgba(17, 24, 39, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes breathe {
+  0%, 100% {
+    background-size: 100% 100%, 100% 100%, 100% 100%;
+  }
+  50% {
+    background-size: 120% 120%, 120% 120%, 100% 100%;
+  }
 }
