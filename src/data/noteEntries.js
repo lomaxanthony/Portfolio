@@ -78,41 +78,45 @@ const noteEntries = [
     I think Vibe-Coding certain sections with the knowledge that at some point I will absolutely need to refactor is a slippery slope as the scope increases with this and other projects. Although this approach has allowed me to get a functional app live, and my thirst for tinkering and understanding is saving me from an endless tunnel of shallow understanding.`,
   },
   {
-        date:"07/08/2025",
-        title:"Overscroll",
-        content: 
-        `So apparently macOS has issues with overscrolling, which I didn’t know! I’ve been predominantly  developing on Windows for my Portfolio site using Firefox as my default browser. I have a post from yesterday where I discuss finally viewing my site from my iPhone’s Safari browser (I like to block ads, which can only be done with Safari 🙃). Digression aside, today I decided to do some development from my MacBook. I fixed the formatting of a button to match other buttons on my site. After completing that task, I was just bouncing around the website, checking that everything was working as I intended, when I noticed that scrolling all the way up or all the way down, showed some white space. It looked awful. I looked it up and this is known issue with some browsers and especially with MacOS’s trackpad behavior.
-        <br></br>
-        I’m gonna be honest, I never would have know this stuff unless I played around with different browsers and operating systems, an idea that school would have never taught me. There is no assignment that focuses on testing your app on different systems or architectures. The subject is slightly addressed, and I knew that it was a potential issue that developers had to consider when building a product. But seeing first hand how something that I built looks on various platforms, knowing when a feature or a page doesn’t look ‘right’, really opened my eyes. All the posts and videos telling un-hired devs to just build things to learn were right. School simulates design and gives you practice. Building a working project is a completely different beast, and I’ve learned so much about the design edge cases of building a simple static site.
-        <br></br>
-        Back to the overscoll…
-        <br></br>
-        I had copilot fix it for me, and here’s what it explained to me:
-        <br></br>
-        To prevent overscrolling from showing white space, you typically need to set the background color of the html and body elements to match your site's background.
-        To prevent overscrolling from showing white space, you need to ensure that the html element also has the same background as your body. The issue is that when users overscroll (especially on mobile devices or with trackpads), the browser shows the html element's background, which defaults to white.
-        Here's how to fix it by updating your CSS:
-        
-        <code> index.css+5-0 
-        // Additionally, you can add some CSS properties to further prevent overscrolling behavior:
-        index.css+6-0
-        </code>
-        <br></br>
-        Here's what I've added to prevent overscrolling white space:
-        HTML background: Set the html element to have the same dark gradient background as your site
-        overscroll-behavior: none: This prevents the bouncing overscroll effect on both html and body
-        overflow-x: hidden: This prevents horizontal overscrolling on mobile devices
-        These changes will ensure that:
-        When users overscroll vertically (bounce effect on mobile/trackpad), they'll see your dark background instead of white
-        The overscroll bounce animation is disabled
-        Horizontal overscrolling is prevented
-        The key insight is that the html element is what shows during overscroll, so it needs to match your site's design. This is a common issue that many developers overlook!     
-        `
-    }
-
+    date: "07/08/2025",
+    title: "Overscroll",
+    content: `So apparently macOS has issues with overscrolling, which I didn’t know! I’ve been predominantly  developing on Windows for my Portfolio site using Firefox as my default browser. I have a post from yesterday where I discuss finally viewing my site from my iPhone’s Safari browser (I like to block ads, which can only be done with Safari 🙃). Digression aside, today I decided to do some development from my MacBook. I fixed the formatting of a button to match other buttons on my site. After completing that task, I was just bouncing around the website, checking that everything was working as I intended, when I noticed that scrolling all the way up or all the way down, showed some white space. It looked awful. I looked it up and this is known issue with some browsers and especially with MacOS’s trackpad behavior.
+    <br></br>
+    I’m gonna be honest, I never would have know this stuff unless I played around with different browsers and operating systems, an idea that school would have never taught me. There is no assignment that focuses on testing your app on different systems or architectures. The subject is slightly addressed, and I knew that it was a potential issue that developers had to consider when building a product. But seeing first hand how something that I built looks on various platforms, knowing when a feature or a page doesn’t look ‘right’, really opened my eyes. All the posts and videos telling un-hired devs to just build things to learn were right. School simulates design and gives you practice. Building a working project is a completely different beast, and I’ve learned so much about the design edge cases of building a simple static site.
+    <br></br>
+    Back to the overscoll…
+    <br></br>
+    I had copilot fix it for me, and here’s what it explained to me:
+    <br></br>
+    To prevent overscrolling from showing white space, you typically need to set the background color of the html and body elements to match your site's background.
+    To prevent overscrolling from showing white space, you need to ensure that the html element also has the same background as your body. The issue is that when users overscroll (especially on mobile devices or with trackpads), the browser shows the html element's background, which defaults to white.
+    Here's how to fix it by updating your CSS:  
+    <code> index.css+5-0 
+    // Additionally, you can add some CSS properties to further prevent overscrolling behavior:
+    index.css+6-0
+    </code>
+    <br></br>
+    Here's what I've added to prevent overscrolling white space:
+    HTML background: Set the html element to have the same dark gradient background as your site
+    overscroll-behavior: none: This prevents the bouncing overscroll effect on both html and body
+    overflow-x: hidden: This prevents horizontal overscrolling on mobile devices
+    These changes will ensure that:
+    When users overscroll vertically (bounce effect on mobile/trackpad), they'll see your dark background instead of white
+    The overscroll bounce animation is disabled
+    Horizontal overscrolling is prevented
+    The key insight is that the html element is what shows during overscroll, so it needs to match your site's design. This is a common issue that many developers overlook!     
+    `,
+  },
+  {
+    date: "07/09/2025",
+    title: "Next Steps?",
+    content: `What’s next for this Portfolio Site? I have most of the goals I set completed. There are a few small things I can add, but the main functionality and layout are exactly what I had in mind for a simple Portfolio site where employers can get to know me, see my projects, and communicate with me if needed. I have no backend framework currently and don’t know that I need one. I could keep tinkering with themes and styles, or maybe add something interactive? The beauty of this project is that I dictate what gets made and how it gets made.
+    <br></br>
+    Truthfully I am just happy to finally have something that I can show. I dragged my feet for damn near 9 months saying that I was gonna build a portfolio site in react. And I just kept re-thinking and re-planning my *how—*completely forgetting my *why.* Eventually I ignored my tire-spinning brain, and just coded some shit. Slowly, it all came together.
+    <br></br>
+    There is, obviously, still some work to do with the Portfolio site. Barebones by design, I don’t want to get stuck adding new features to a site that doesn’t need them. I could be spending that time designing something new, something more advanced. My next project will be better and more complex. Continuing to experiment and build is all I can do while I ride out this tidal wave—drought is probably the better metaphor—of a terrible job market.       
+    `,
+  },
 ];
 
 export default noteEntries;
-
-
-
