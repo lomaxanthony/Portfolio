@@ -40,63 +40,64 @@ const Contact = () => {
     <div className="min-h-screen py-12">
       <div className="max-w-2xl mx-auto px-6">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Get In Touch
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
+          <p className="text-lg text-gray-300">
             Have a question or want to work together? I'd love to hear from you!
           </p>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+        {/* Contact Form */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg p-8 border border-white/20">
           <form ref={form} onSubmit={sendEmail} className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
                 Name *
               </label>
               <input
                 type="text"
                 name="user_name"
                 required
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-200"
+                className="w-full px-4 py-3 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white/5 text-white placeholder-gray-400 transition-colors duration-200"
                 placeholder="Your full name"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
                 Email *
               </label>
               <input
                 type="email"
                 name="user_email"
                 required
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-200"
+                className="w-full px-4 py-3 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white/5 text-white placeholder-gray-400 transition-colors duration-200"
                 placeholder="your.email@example.com"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
                 Subject
               </label>
               <input
                 type="text"
                 name="subject"
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-200"
+                className="w-full px-4 py-3 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white/5 text-white placeholder-gray-400 transition-colors duration-200"
                 placeholder="What's this about?"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
                 Message *
               </label>
               <textarea
                 name="message"
                 rows={6}
                 required
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-200 resize-vertical"
+                className="w-full px-4 py-3 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white/5 text-white placeholder-gray-400 transition-colors duration-200 resize-vertical"
                 placeholder="Tell me about your project, question, or just say hello!"
               />
             </div>
@@ -104,11 +105,8 @@ const Contact = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-2 bg-white/5 hover:bg-white/10 text-blue-100 hover:text-white-900 border border-green-300 font-medium rounded-md transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-100 focus:ring-offset-2 shadow-lg"
+              className="w-full py-3 bg-transparent hover:bg-white/10 text-blue-100 hover:text-white border border-green-300 font-medium rounded-lg transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 shadow-lg flex items-center justify-center"
             >
-
-              {/* "px-6 py-2 bg-transparent hover:bg-white/10 text-blue-100 hover:text-white-900 border border-green-300 font-medium rounded-md transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-100 focus:ring-offset-2 shadow-lg" */}
-          
               {isLoading ? (
                 <>
                   <svg
@@ -138,18 +136,40 @@ const Contact = () => {
               )}
             </button>
           </form>
+        </div>
 
-          {message && (
-            <div
-              className={`mt-6 p-4 rounded-lg ${
-                message.includes("successfully")
-                  ? "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200"
-                  : "bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200"
-              }`}
-            >
-              <p className="text-center font-medium">{message}</p>
+        {/* Message feedback */}
+        {message && (
+          <div
+            className={`mt-6 p-4 rounded-lg ${
+              message.includes("successfully")
+                ? "bg-green-900/50 text-green-200 border border-green-500/30"
+                : "bg-red-900/50 text-red-200 border border-red-500/30"
+            }`}
+          >
+            <p className="text-center font-medium">{message}</p>
+          </div>
+        )}
+
+        {/* Resume Download Section - moved below the form */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg p-6 mt-8 border border-white/20">
+          <div className="flex items-center justify-between">
+            <div>
+              <h4 className="text-xl font-semibold text-white mb-2">
+                Download My Resume
+              </h4>
             </div>
-          )}
+            <a
+              href="/Portfolio/public/Portfolio/LomaxAnthonyResume25.pdf"
+              download="LomaxAnthonyResume25.pdf"
+              className="px-6 py-3 bg-transparent hover:bg-white/10 text-blue-100 hover:text-white border border-blue-300 font-medium rounded-lg transition-all duration-200 transform hover:scale-105 flex items-center space-x-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>Download</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -110,7 +110,7 @@ const noteEntries = [
   {
     date: "07/09/2025",
     title: "Next Steps?",
-    content: `What’s next for this Portfolio Site? I have most of the goals I set completed. There are a few small things I can add, but the main functionality and layout are exactly what I had in mind for a simple Portfolio site where employers can get to know me, see my projects, and communicate with me if needed. I have no backend framework currently and don’t know that I need one. I could keep tinkering with themes and styles, or maybe add something interactive? The beauty of this project is that I dictate what gets made and how it gets made.
+    content: `What’s next for this Portfolio Site? I've completed most of the goals that I set. There are a few small things I can add, but the main functionality and layout are exactly what I had in mind for a simple Portfolio site where employers can get to know me, see my projects, and communicate with me if needed. I have no backend framework currently and don’t know that I need one. I could keep tinkering with themes and styles, or maybe add something interactive? The beauty of this project is that I dictate what gets made and how it gets made.
     <br></br>
     Truthfully I am just happy to finally have something that I can show. I dragged my feet for damn near 9 months saying that I was gonna build a portfolio site in react. And I just kept re-thinking and re-planning my *how—*completely forgetting my *why.* Eventually I ignored my tire-spinning brain, and just coded some shit. Slowly, it all came together.
     <br></br>

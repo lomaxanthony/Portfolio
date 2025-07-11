@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Intro from "./components/Intro";
+import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Timeline from "./components/Timeline";
 import Notes from "./components/Notes";
@@ -15,7 +15,7 @@ function App() {
         <Header />
         <main className="flex-1">
           <Routes>
-            <Route path="/Portfolio/" element={<Intro />} />
+            <Route path="/Portfolio/" element={<Home />} />
             <Route path="/Portfolio/projects" element={<Projects />} />
             <Route path="/Portfolio/timeline" element={<Timeline />} />
             <Route path="/Portfolio/notes" element={<Notes />} />
